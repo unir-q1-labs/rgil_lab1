@@ -19,14 +19,15 @@
     </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:itemDefinition id="_A6FD69D0-7449-4C2C-B28B-F0D2697BB47D" name="tViolation" isCollection="false">
-    <dmn:itemComponent id="_7C42C269-8330-415A-887F-64A9A6585A91" name="Actual Speed" isCollection="false">
-      <dmn:typeRef>number</dmn:typeRef>
-    </dmn:itemComponent>
+    <dmn:itemComponent id="_7C42C269-8330-415A-887F-64A9A6585A91" name="Actual Speed" isCollection="false"/>
     <dmn:itemComponent id="_4773A57F-F9BF-4CC7-B448-51EAC8D79147" name="Speed Limit" isCollection="false">
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
     <dmn:itemComponent id="_A1A64568-BECB-4858-A51E-B5D858323081" name="Type" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
+      <dmn:allowedValues kie:constraintType="enumeration" id="_6074820A-7461-4A23-84B3-78EB4C130A22">
+        <dmn:text>null</dmn:text>
+      </dmn:allowedValues>
     </dmn:itemComponent>
     <dmn:itemComponent id="_480AEFFB-6790-4419-83DE-61573DBCB536" name="Date" isCollection="false">
       <dmn:typeRef>date</dmn:typeRef>
