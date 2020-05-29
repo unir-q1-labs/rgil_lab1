@@ -25,8 +25,8 @@
     </dmn:itemComponent>
     <dmn:itemComponent id="_A1A64568-BECB-4858-A51E-B5D858323081" name="Type" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
-      <dmn:allowedValues kie:constraintType="enumeration" id="_6074820A-7461-4A23-84B3-78EB4C130A22">
-        <dmn:text>null</dmn:text>
+      <dmn:allowedValues kie:constraintType="enumeration" id="_0F831E34-0D57-4255-AD0A-94995891AE39">
+        <dmn:text>"speed", "parking", "driving under the influence"</dmn:text>
       </dmn:allowedValues>
     </dmn:itemComponent>
     <dmn:itemComponent id="_480AEFFB-6790-4419-83DE-61573DBCB536" name="Date" isCollection="false">
@@ -36,24 +36,34 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
+  <dmn:itemDefinition id="_04E9AED1-3F09-4FA0-ADAB-953CC0990FC4" name="tFine" isCollection="false">
+    <dmn:itemComponent id="_7859BDE4-87DA-426D-BC3B-C6B3303BE7DF" name="Points" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_5B099A4B-36A0-4550-B99D-3D00AEF1687A" name="Amount" isCollection="false">
+      <dmn:typeRef>number</dmn:typeRef>
+    </dmn:itemComponent>
+  </dmn:itemDefinition>
   <dmn:decision id="_EE631C0D-3D3A-4F34-A2F6-01DFBF981820" name="Fine">
     <dmn:extensionElements/>
-    <dmn:variable id="_15BFD847-292F-4342-A376-660148A59D87" name="Fine"/>
+    <dmn:variable id="_15BFD847-292F-4342-A376-660148A59D87" name="Fine" typeRef="tFine"/>
     <dmn:informationRequirement id="_C2CDF7C3-6DD3-480E-9D25-E8265EFDB975">
       <dmn:requiredInput href="#_79952067-9C3C-4292-881B-50DE378DAE40"/>
     </dmn:informationRequirement>
   </dmn:decision>
   <dmn:inputData id="_EA27E7C9-BD0E-4F32-9BC3-C6A138418F2D" name="Driver">
     <dmn:extensionElements/>
-    <dmn:variable id="_6DD4FCF2-7DDB-49BF-A0EC-D9602662D43A" name="Driver"/>
+    <dmn:variable id="_6DD4FCF2-7DDB-49BF-A0EC-D9602662D43A" name="Driver" typeRef="tDriver"/>
   </dmn:inputData>
   <dmn:inputData id="_79952067-9C3C-4292-881B-50DE378DAE40" name="Violation">
     <dmn:extensionElements/>
-    <dmn:variable id="_7FE03449-D7EB-40FD-999C-4C96666A182A" name="Violation"/>
+    <dmn:variable id="_7FE03449-D7EB-40FD-999C-4C96666A182A" name="Violation" typeRef="tViolation"/>
   </dmn:inputData>
   <dmn:decision id="_33D7F44C-928C-4CFE-9E16-0174F20AA571" name="Shouldmthe driver be suspended?">
     <dmn:extensionElements/>
-    <dmn:variable id="_A1995396-AC59-4673-8CD0-EE2E67A50C22" name="Shouldmthe driver be suspended?"/>
+    <dmn:question>Should the driver be suspended due to points on his driver license?</dmn:question>
+    <dmn:allowedAnswers>Yes,No</dmn:allowedAnswers>
+    <dmn:variable id="_A1995396-AC59-4673-8CD0-EE2E67A50C22" name="Shouldmthe driver be suspended?" typeRef="string"/>
     <dmn:informationRequirement id="_8632666F-68E9-44FF-B175-41CFB8D4A5AA">
       <dmn:requiredInput href="#_EA27E7C9-BD0E-4F32-9BC3-C6A138418F2D"/>
     </dmn:informationRequirement>
@@ -66,6 +76,15 @@
       <di:extension>
         <kie:ComponentsWidthsExtension/>
       </di:extension>
+      <dmndi:DMNShape id="dmnshape-_EE631C0D-3D3A-4F34-A2F6-01DFBF981820" dmnElementRef="_EE631C0D-3D3A-4F34-A2F6-01DFBF981820" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="684" y="213" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_EA27E7C9-BD0E-4F32-9BC3-C6A138418F2D" dmnElementRef="_EA27E7C9-BD0E-4F32-9BC3-C6A138418F2D" isCollapsed="false">
         <dmndi:DMNStyle>
           <dmndi:FillColor red="255" green="255" blue="255"/>
@@ -82,15 +101,6 @@
           <dmndi:FontColor red="0" green="0" blue="0"/>
         </dmndi:DMNStyle>
         <dc:Bounds x="636" y="330" width="100" height="50"/>
-        <dmndi:DMNLabel/>
-      </dmndi:DMNShape>
-      <dmndi:DMNShape id="dmnshape-_EE631C0D-3D3A-4F34-A2F6-01DFBF981820" dmnElementRef="_EE631C0D-3D3A-4F34-A2F6-01DFBF981820" isCollapsed="false">
-        <dmndi:DMNStyle>
-          <dmndi:FillColor red="255" green="255" blue="255"/>
-          <dmndi:StrokeColor red="0" green="0" blue="0"/>
-          <dmndi:FontColor red="0" green="0" blue="0"/>
-        </dmndi:DMNStyle>
-        <dc:Bounds x="684" y="213" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
       <dmndi:DMNShape id="dmnshape-_33D7F44C-928C-4CFE-9E16-0174F20AA571" dmnElementRef="_33D7F44C-928C-4CFE-9E16-0174F20AA571" isCollapsed="false">
