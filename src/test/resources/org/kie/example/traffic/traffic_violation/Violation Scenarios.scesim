@@ -54,7 +54,7 @@
           <expressionAlias>Points</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>131.80022962112514</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -78,7 +78,7 @@
           <expressionAlias>Type</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>216.19862227324913</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -102,7 +102,7 @@
           <expressionAlias>Speed Limit</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>131.80022962112514</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -125,7 +125,7 @@
           <factAlias>Violation</factAlias>
           <expressionAlias>Actual Speed</expressionAlias>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>131.80022962112514</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -149,7 +149,7 @@
           <expressionAlias>Points</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>126.80022962112514</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -173,7 +173,7 @@
           <expressionAlias>Amount</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>149.6004592422504</columnWidth>
         </FactMapping>
         <FactMapping>
           <expressionElements>
@@ -194,7 +194,7 @@
           <expressionAlias>value</expressionAlias>
           <genericTypes/>
           <factMappingValueType>NOT_EXPRESSION</factMappingValueType>
-          <columnWidth>114.0</columnWidth>
+          <columnWidth>131.80022962112514</columnWidth>
         </FactMapping>
       </factMappings>
     </scesimModelDescriptor>
